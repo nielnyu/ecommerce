@@ -1,0 +1,16 @@
+<body>
+    <div class="product-details">
+        <img [src]= "imageSrc" alt="Product Image" class="product-image">
+        <div class="product-info">
+            <h1 class="product-title">{{title}} </h1>
+            <p class="product-price">${{price}}</p>
+            <label class = "product-description">Colors:</label>
+            <button class="color-picker" *ngFor = "let color of colors" (click) = "selectColor(color)">{{color}}</button>
+            <br>
+            <p class = "product-extra">In Stock: {{stock}}</p>
+            <button class="q-picker"  [disabled] = "count === 0" (click) = "handleDelete()">-</button>
+            <label class = "product-extra">{{count}}</label>
+            <button class="q-picker"  [disabled] = "count === stock" (click) = "handleAdd()">+</button>
+        </div>
+    </div>
+</body>

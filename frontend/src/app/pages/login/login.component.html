@@ -1,0 +1,13 @@
+<div class = "login-card-container"> 
+    <h2>User Login</h2>
+    <form [formGroup] = "loginForm" >
+        <label>{{emailLabel}}</label>
+        <input [placeholder] = "placeEmail" formControlName = "emailAddress">
+        <label>{{passwordLabel}}</label>
+        <input [placeholder] = "placePassword" type = "password" id = "userPass" formControlName = "password">
+        <div >
+            <button class = "show-password-container" (click) = "handlePass()">{{showPasswordName}}</button>
+        </div>
+        <app-button type = "submit" (click) = "onSubmit('Home')" [buttonName] = "loginName" ></app-button>
+    </form>
+</div>

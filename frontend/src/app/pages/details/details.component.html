@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class = "details-container">
+    <app-detail-card 
+    [title] = "productChoosed.name" 
+    [imageSrc] = "productChoosed.pImage" 
+    [price] = "productChoosed.price" 
+    [colors] = productChoosed.colors
+    [stock] = productChoosed.quantity
+    [count] = "0"></app-detail-card>
+    <app-button [buttonName] = "addCartButton" (click) = handleAddCart()></app-button>
+</div>
+
