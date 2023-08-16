@@ -1,0 +1,30 @@
+.signup-card-container {  
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    min-height: 95vh; 
+}
+
+.signup-card-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 16px;
+
+  }
+
+  .signup-card-container input:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 8px grey;
+  }

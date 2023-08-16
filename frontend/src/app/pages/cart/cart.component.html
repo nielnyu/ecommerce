@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-items">
+            <app-cart-card></app-cart-card>
+            <!-- Repeat for other cart items -->
+        </ul>
+        <p class="total">Total: $99.96</p>
+        <app-button [buttonName] = "checkOut"></app-button>
+    </div>
+</body>

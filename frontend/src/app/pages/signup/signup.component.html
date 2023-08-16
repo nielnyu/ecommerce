@@ -1,0 +1,12 @@
+<div class = "signup-card-container">
+    <h2>Sign Up</h2>
+    <form [formGroup] = "signUpForm" (ngSubmit) = onSubmit()>
+        <label>{{emailLabel}}</label>
+        <input [placeholder] = "placeEmail" formControlName = "emailAddress">
+        <label>{{passwordLabel}}</label>
+        <input [placeholder] = "placePassword" id = "userPass" formControlName = "password">
+        <label>{{reenterLabel}}</label>
+        <input [placeholder]= "placeReenter" formControlName = reenter>
+        <app-button type = "submit" [buttonName] = "signUpName"></app-button>
+    </form>
+</div>

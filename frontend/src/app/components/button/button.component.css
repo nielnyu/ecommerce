@@ -1,0 +1,24 @@
+/* Sleek Chic Button Styles */
+.sleek-chic-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: solid;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .sleek-chic-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  

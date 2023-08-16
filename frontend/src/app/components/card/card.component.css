@@ -1,0 +1,61 @@
+.card {
+    width: 200px;
+    background-color: #FDFEFE;
+    margin: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #efefef 2px solid;
+    cursor: pointer;
+}
+
+
+
+.card-image{
+    width: 195px;
+    height: 190px
+}
+
+.card-title{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+   
+    
+}
+
+.card-info{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Equal width columns */
+    grid-gap: 10px;
+}
+.card-price {
+    font-size: 14px;
+    position: absolute;
+    color: black;
+    letter-spacing: 1px;
+
+
+}
+
+.card-color{
+    font-size: 12px;
+    color: black;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border: solid;
+}

@@ -1,0 +1,15 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
+})
+export class CardComponent {
+
+  @Input () title = ""
+  @Input () price = 0
+  @Input () imageSrc = ""
+  @Input () colors = 0
+
+}
