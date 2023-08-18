@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardtodetailService } from 'src/app/services/cardtodetail.service';
 import { ProductData } from 'src/app/interfaces/product-data';
+import { LoadProductService } from 'src/app/services/load-product.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +13,19 @@ import { ProductData } from 'src/app/interfaces/product-data';
 export class HomeComponent {
 
   //router and service instance
-  constructor(private router: Router, public cardToService: CardtodetailService){
+  constructor(private router: Router, public cardToService: CardtodetailService, public loadingProduct: LoadProductService){
   }
 
-  test_product: ProductData[] = this.cardToService.getProducts()
+  product: any
+  productList$: any = this.loadingProduct.getProducts().pipe(tap((data) => this.product = data))
+
 
 
   //handleClick
 
   onClick = (choosed: number) =>{
     console.log("product id", choosed)
+    console.log(this.productList$)
     this.cardToService.setProduct(choosed)
     this.router.navigate((['Details']))
   }

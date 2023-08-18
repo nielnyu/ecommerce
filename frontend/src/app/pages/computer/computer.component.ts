@@ -13,7 +13,7 @@ export class ComputerComponent {
   constructor(private router: Router, public cardToService: CardtodetailService){
   }
 
-  test_product: ProductData[] = this.cardToService.getCategory("Computer")
+  test_product: any = this.cardToService.getCategory("Computer")
 
 
   //handleClick

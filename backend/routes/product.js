@@ -9,6 +9,20 @@ router.get("/",  async (req,res)=>{
     console.log("Product List is working")
 })
 
+router.post("/", async(req, res) => {
+    try{
+        const sql = "UPDATE Products SET quantity = quantity - 1 WHERE prod_id = ?"
+        const result = await db.promise().query(sql, [req.body.id])
+        res.status(200).json({message: "Success"})
+
+    }
+    catch(err){
+        res.json({message: err.message})
+    }
+
+
+})
+
 module.exports = router;
 
 

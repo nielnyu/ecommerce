@@ -10,6 +10,6 @@ export class CardComponent {
   @Input () title = ""
   @Input () price = 0
   @Input () imageSrc = ""
-  @Input () colors = 0
+  @Input () colors = ""
 
 }

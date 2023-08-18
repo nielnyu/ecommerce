@@ -13,7 +13,7 @@ export class PhoneComponent {
     constructor(private router: Router, public cardToService: CardtodetailService){
     }
   
-    test_product: ProductData[] = this.cardToService.getCategory("Phone")
+    test_product: any = this.cardToService.getCategory("Phone")
   
   
     //handleClick

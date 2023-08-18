@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SignupService } from 'src/app/services/signup.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -31,10 +33,22 @@ export class SignupComponent {
       reenter: new FormControl(""),
     });
 
+    constructor (public signUp: SignupService,private router: Router){}
     //handle event 
 
+    message: string
+
     onSubmit = () =>{
-      console.log(this.signUpForm.value)
+      this.signUp.addUser(this.signUpForm.value.emailAddress, this.signUpForm.value.password, this.signUpForm.value.reenter)
+      .subscribe((data: any) =>{
+        if (data.message === "Email Added"){
+          this.router.navigate(['Home'])
+        }
+        else{
+          this.message = data.message
+        }
+      })
     }
+
 
 }

@@ -10,9 +10,10 @@ import { ComputerComponent } from './pages/computer/computer.component';
 import { HeadphoneComponent } from './pages/headphone/headphone.component';
 import { CardComponent } from './components/card/card.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { MockComponent } from './pages/mock/mock.component';
 
 const routes: Routes = [
-  {path: "Register", component: RegisterComponent},
+  {path: "", component: RegisterComponent},
   {path: "Login", component: LoginComponent},
   {path: "Signup", component: SignupComponent},
   {path: "Home", component: HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: "Phone", component: PhoneComponent},
   {path: "Computer", component: ComputerComponent},
   {path: "HeadPhone", component: HeadphoneComponent},
-  {path: "Cart", component: CartComponent}
+  {path: "Cart", component: CartComponent},
+  {path: "Mock", component: MockComponent}
 ];
 
 @NgModule({
