@@ -2,8 +2,8 @@
 
 <h2 class = "filter">All Products</h2>
 <div class="card-container">
-    <a *ngFor = "let product of test_product" (click) = "onClick(product.id)">
-        <app-card [title] = "product.name" [colors] = "product.colors.length" [imageSrc] = "product.pImage" [price] = "product.price"></app-card>
+    <a *ngFor = "let prod of productList$ | async" (click) = "onClick(prod.prod_id)">
+        <app-card [title] = "prod.name"  [imageSrc] = "prod.pImage" [price] = "prod.price" [colors] = "prod.color"></app-card>
     </a>
 </div>
 

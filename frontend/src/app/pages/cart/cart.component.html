@@ -2,11 +2,10 @@
 <body>
     <div class="cart">
         <h2>Your Cart</h2>
-        <ul class="cart-items">
-            <app-cart-card></app-cart-card>
-            <!-- Repeat for other cart items -->
+        <ul class="cart-items" *ngFor = "let item of inYourCart">
+            <app-cart-card [imageSrc] = "item.pImage" [title] = "item.name" [price] = "item.price" ></app-cart-card>
         </ul>
-        <p class="total">Total: $99.96</p>
-        <app-button [buttonName] = "checkOut"></app-button>
+        <p class="total">Total: ${{total}}</p>
+        <app-button (click) = "handleCheckout()"[buttonName] = "checkOut"></app-button>
     </div>
 </body>

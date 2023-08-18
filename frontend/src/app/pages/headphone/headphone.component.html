@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <h2 class = "filter">All Headphones</h2>
 <div class="card-container">
-    <a *ngFor = "let product of test_product" (click) = "onClick(product.id)">
-        <app-card [title] = "product.name" [colors] = "product.colors.length" [imageSrc] = "product.pImage" [price] = "product.price"></app-card>
+    <a *ngFor = "let product of test_product" (click) = "onClick(product.prod_id)">
+        <app-card [title] = "product.name" [colors] = "product.color" [imageSrc] = "product.pImage" [price] = "product.price"></app-card>
     </a>
 </div>

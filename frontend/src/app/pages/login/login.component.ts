@@ -3,6 +3,7 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
 import { InputComponent } from 'src/app/components/input/input.component';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -33,15 +34,23 @@ export class LoginComponent {
   });
 
   //router
-  constructor(private router: Router){
+  constructor(private router: Router, public loginService: LoginService){
   }
 
   //handle event
 
+  message: string
+
   onSubmit = (pageName: string) =>{
-    console.log("Submitted")
-    console.log(this.loginForm.value)
-    this.router.navigate(([`${pageName}`]))
+    this.loginService.authUser(this.loginForm.value.emailAddress, this.loginForm.value.password)
+    .subscribe((data: any) =>{
+      if (data.message === "Success"){
+        this.router.navigate(['Home'])
+      }
+      else{
+        this.message = data.message
+      }
+    })
 
   }
 

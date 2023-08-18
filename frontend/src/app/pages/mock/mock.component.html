@@ -1,0 +1,7 @@
+<p>mock works!</p>
+<button (click) = "run()"></button>
+<p>{{product | json}}</p>
+<ul *ngFor = "let prod of productList$ | async">
+    <li>{{prod.prod_id}}</li>
+    <li>{{prod.name}}</li>
+</ul>

@@ -14,7 +14,7 @@ export class HeadphoneComponent {
   constructor(private router: Router, public cardToService: CardtodetailService){
   }
 
-  test_product: ProductData[] = this.cardToService.getCategory("HeadPhone")
+  test_product: any = this.cardToService.getCategory("HeadPhone")
 
 
   //handleClick
