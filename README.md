@@ -31,4 +31,10 @@ Using MySql created two tables
 
 3. Payment Integration - Involve actually payment system to make this a real ecommerce app
 
+## Deployment 
+
+This was challenging, but fun. I used the AWS EC2 service with Ubuntu and Nginx reverse proxy engine to live host this project. 
+
+link: [http://3.145.157.15]
+
 
