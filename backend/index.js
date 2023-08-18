@@ -17,14 +17,14 @@ const products = require("./routes/product")
 const register = require("./routes/register")
 const login = require("./routes/login")
 
-app.use("/product", products);
-app.use("/register", register)
-app.use("/login", login)
+app.use("/api/product", products);
+app.use("/api/register", register)
+app.use("/api/login", login)
 
 app.use(passport.initialize())
 app.use(passport.session())
 
-
-app.listen(3000,() => {console.log("Server started on port 3000")})
+const port = process.env.port || 3000
+app.listen(port,() => {console.log("Server started on port 3000")})
 
 module.exports = app;
